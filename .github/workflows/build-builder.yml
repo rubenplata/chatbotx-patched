@@ -15,9 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache
+          df -h /
+
       - name: Add swap space
         run: |
-          sudo fallocate -l 12G /extra-swapfile
+          sudo fallocate -l 6G /extra-swapfile
           sudo chmod 600 /extra-swapfile
           sudo mkswap /extra-swapfile
           sudo swapon /extra-swapfile

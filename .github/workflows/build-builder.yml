@@ -17,10 +17,10 @@ jobs:
 
       - name: Add swap space
         run: |
-          sudo fallocate -l 12G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          sudo fallocate -l 12G /extra-swapfile
+          sudo chmod 600 /extra-swapfile
+          sudo mkswap /extra-swapfile
+          sudo swapon /extra-swapfile
           free -h
 
       - name: Set up Docker Buildx

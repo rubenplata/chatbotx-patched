@@ -309,6 +309,31 @@ export const CONTACT_FILTER_FIELD_DEFINITIONS = [
     schemaKind: "multiSelect",
     optionSource: "ctwaConversionTypes",
   },
+  {
+    field: contactFilterFields.enum.instagramStoryReply,
+    schemaKind: "boolean",
+    optionSource: "none",
+  },
+  {
+    field: contactFilterFields.enum.followsBusinessOnInstagram,
+    schemaKind: "boolean",
+    optionSource: "none",
+  },
+  {
+    field: contactFilterFields.enum.businessFollowsUserOnInstagram,
+    schemaKind: "boolean",
+    optionSource: "none",
+  },
+  {
+    field: contactFilterFields.enum.verifiedAccountOnInstagram,
+    schemaKind: "boolean",
+    optionSource: "none",
+  },
+  {
+    field: contactFilterFields.enum.followerCountOnInstagram,
+    schemaKind: "number",
+    optionSource: "none",
+  },
 ] as const satisfies readonly ContactFilterFieldDefinition[]
 
 export const contactFilterConditionSchemas =
